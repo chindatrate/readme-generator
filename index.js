@@ -1,9 +1,9 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
+const fileGenerator = require("./fileGenerator");
 
-
-inquirer.prompt(
-    [
+const promptUser = () => {
+    return inquirer.prompt([
         {
             type: "input",
             message: "What is the title of your repository?",
@@ -47,48 +47,14 @@ inquirer.prompt(
             type: "input",
             message: "What is your email address?",
             name: "email"
-        }
-    ]
-)
+        },
+    ]);
+};
 
-    .then(({ title, description, install, usage, contribution, test, license, github, email }) => {
-        fs.writeFile('README.md',
-
-            `# ${title}
-
-## Description
-    ${description}
-
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contribute](#contribute)
-- [Questions](#questions)
-- [Testing](#testing)
-- [License](#license)
-
-
-## Installation
-${install}
-
-## Usage
-${usage}
-
-## Contribute
-${contribution}
-
-## Testing
-${test}
-
-## License
-${license}
-
-## Questions
-Email: ${email}
-
-GitHub: https://github.com/${github}
-
-
-    `
-        )
-    })
+const init = () => {
+    promptUser()
+        .then((answers) => fs.writeFileSync('README_GENERATOR.md', fileGenerator(answers)))
+        .then(() => console.log('Success!'))
+        .catch((err) => console.log(err));
+};
+init();
