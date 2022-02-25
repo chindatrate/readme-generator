@@ -8,9 +8,9 @@ ${response.description}
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contribute](#contribute)
-* [Questions](#questions)
 * [Testing](#testing)
 * [License](#license)
+* [Questions](#questions)
 
 ## Installation
 ${response.install}

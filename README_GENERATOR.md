@@ -1,7 +1,7 @@
-# test repo
+# readme-generator
     
 ## Description
-test
+Develop a README generator to quickly create a professional README for a new project.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -12,21 +12,21 @@ test
 * [License](#license)
 
 ## Installation
-test
+Clone the repository, install node.js and run npm i from terminal
 
 ## Usage
-test
+Run node index.js from root directory and respond to prompts. When successfully completed, a new file will generate called README_Generator.md
 
 ## Contribute
-test
+N/A
 
 ## Testing
-test
+N/a
 
 ## License
 None
 
 ## Questions
-Email: test-user@test.com
+Email: chindatrate@me.com
 
-GitHub: https://github.com/test-username
+GitHub: https://github.com/chindatrate
